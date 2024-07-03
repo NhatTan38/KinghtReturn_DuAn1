@@ -37129,7 +37129,7 @@ GameObject:
   - component: {fileID: 1658885654}
   - component: {fileID: 1658885661}
   - component: {fileID: 1658885657}
-  - component: {fileID: 1658885660}
+  - component: {fileID: 1658885662}
   - component: {fileID: 1658885659}
   m_Layer: 0
   m_Name: Player
@@ -37283,20 +37283,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1658885660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658885653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 380127331d7836d4db83f1e2270532c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumSpeed: 20
 --- !u!58 &1658885661
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -37332,6 +37318,20 @@ CircleCollider2D:
   m_Offset: {x: -0.19765091, y: 0}
   serializedVersion: 2
   m_Radius: 0.5210991
+--- !u!114 &1658885662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658885653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380127331d7836d4db83f1e2270532c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpSpeed: 20
 --- !u!1 &1938401740
 GameObject:
   m_ObjectHideFlags: 0
@@ -37346,7 +37346,7 @@ GameObject:
   - component: {fileID: 1938401746}
   - component: {fileID: 1938401745}
   - component: {fileID: 1938401744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

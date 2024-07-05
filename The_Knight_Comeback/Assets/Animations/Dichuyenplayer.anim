@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dichuyen
+  m_Name: Dichuyenplayer
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -28,19 +28,19 @@ AnimationClip:
       value: {fileID: 2114103630, guid: 4ae84e68af3aee540add1e8128697988, type: 3}
     - time: 0.13333334
       value: {fileID: -721082638, guid: 4ae84e68af3aee540add1e8128697988, type: 3}
-    - time: 0.16666667
+    - time: 0.18333334
       value: {fileID: 1488543810, guid: 4ae84e68af3aee540add1e8128697988, type: 3}
-    - time: 0.21666667
+    - time: 0.23333333
       value: {fileID: -1260952096, guid: 4ae84e68af3aee540add1e8128697988, type: 3}
     - time: 0.26666668
       value: {fileID: 454014372, guid: 4ae84e68af3aee540add1e8128697988, type: 3}
-    - time: 0.3
+    - time: 0.31666666
       value: {fileID: -1643712232, guid: 4ae84e68af3aee540add1e8128697988, type: 3}
-    - time: 0.35
+    - time: 0.36666667
       value: {fileID: -1026587134, guid: 4ae84e68af3aee540add1e8128697988, type: 3}
-    - time: 0.38333333
+    - time: 0.4
       value: {fileID: 691414066, guid: 4ae84e68af3aee540add1e8128697988, type: 3}
-    - time: 0.43333334
+    - time: 0.45
       value: {fileID: -2050260468, guid: 4ae84e68af3aee540add1e8128697988, type: 3}
     attribute: m_Sprite
     path: 
@@ -80,7 +80,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.45000002
+    m_StopTime: 0.46666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

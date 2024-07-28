@@ -155,7 +155,7 @@ MonoBehaviour:
   _enemyLayers:
     serializedVersion: 2
     m_Bits: 512
-  _attackRange: 1.7
+  _attackRange: 3
   _attackDamage: 40
   _attackRate: 2
 --- !u!1 &357090316
@@ -67500,11 +67500,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7360859990960082466, guid: 6265613115478c2458cba643f22a188a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.75
+      value: -30.55
       objectReference: {fileID: 0}
     - target: {fileID: 7360859990960082466, guid: 6265613115478c2458cba643f22a188a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.02
+      value: -13.97
       objectReference: {fileID: 0}
     - target: {fileID: 7360859990960082466, guid: 6265613115478c2458cba643f22a188a, type: 3}
       propertyPath: m_LocalPosition.z

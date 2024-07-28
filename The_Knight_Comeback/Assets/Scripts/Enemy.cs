@@ -13,14 +13,44 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float righttBoundary;
 
+    public Animator _animator;
+
+
+    public int _maxHealth = 100;
+    int _currentHealth;
+
+
     // quai di chuyen phai
     private bool _isMovingRight = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _currentHealth = _maxHealth;
     }
+    public void TakeDamage(int damage)
+    {
+        _currentHealth -= damage;
 
+        // hiệu ứng đau
+        _animator.SetTrigger("isHit");
+        
+
+        if (_currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        Debug.Log("ememy die1!");
+
+        // hiệu ứng chết
+        _animator.SetBool("isDead", true);
+
+        // vô hiệu hóa quái
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+    }
     // Update is called once per frame
     void Update()
     {

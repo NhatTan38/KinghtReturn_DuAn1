@@ -53,8 +53,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _rigidbody2D.velocity += new Vector2(x: 0, y: jumpSpeed);
         }
-
-       
     }
 
     // điều khiển chuyển động nhân vật

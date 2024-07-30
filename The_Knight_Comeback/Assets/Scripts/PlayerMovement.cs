@@ -12,12 +12,15 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     CircleCollider2D _circleCollider2D;
 
+    private bool isAlive;
+
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _circleCollider2D = GetComponent<CircleCollider2D>();
+        isAlive = true;
     }
 
     // Update is called once per frame
@@ -25,16 +28,25 @@ public class PlayerMovement : MonoBehaviour
     {
         Run();
         FlipSprite();
+        Die();
     }
 
     void OnMove(InputValue value)
     {
+        if (!isAlive)
+        {
+            return;
+        }
         moveInput = value.Get<Vector2>();
         Debug.Log(">>>Move Input: " + moveInput);
     }
 
     void OnJump(InputValue value)
     {
+        if (!isAlive)
+        {
+            return;
+        }
         var isTouchingGround = _circleCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"));
         if (!isTouchingGround) return;
         if (value.isPressed)
@@ -62,6 +74,17 @@ public class PlayerMovement : MonoBehaviour
         if (playerHasHorizontalSpeed)
         {
             transform.localScale = new Vector2(Mathf.Sign(_rigidbody2D.velocity.x), y:1f);
+        }
+    }
+
+    void Die()
+    {
+        var isTouchingEnemy = _circleCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy"));
+        if (isTouchingEnemy)
+        {
+            isAlive = false;
+            _animator.SetTrigger("isDie");
+            _rigidbody2D.velocity = new Vector2(x: 0, y: 0);
         }
     }
 }

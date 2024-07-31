@@ -1,12 +1,25 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] float coinValue = 5;
+    [SerializeField] AudioClip coinPickupSFX;
+
+
+    //  đồng xu đã được nhặt
+    private bool isCollected = false;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !isCollected)
         {
-            // Tăng điểm số hoặc làm bất kỳ hành động nào khác bạn muốn khi player thu thập coin
+            isCollected = true;
+            // tăng điểm
+            FindObjectOfType<GameController>().AddScore((int)coinValue);
+            AudioSource.PlayClipAtPoint(coinPickupSFX, Camera.main.transform.position);
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
     }

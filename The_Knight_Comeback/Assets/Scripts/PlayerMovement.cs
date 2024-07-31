@@ -83,6 +83,8 @@ public class PlayerMovement : MonoBehaviour
             isAlive = false;
             _animator.SetTrigger("isDie");
             _rigidbody2D.velocity = new Vector2(x: 0, y: 0);
+            // xử lý die
+            FindObjectOfType<GameController>().ProcessPlayerDeath();
         }
     }
 }

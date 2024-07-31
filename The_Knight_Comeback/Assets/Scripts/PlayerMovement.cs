@@ -1,59 +1,90 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpForce = 10f;
-    private bool isJumping = false;
-    private bool isAttacking = false;
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float jumpSpeed = 10f;
+    private Rigidbody2D _rigidbody2D;
+    Vector2 moveInput;
+    private Animator _animator;
+    CircleCollider2D _circleCollider2D;
 
-    private Rigidbody2D rb;
-    private Animator animator;
-    private bool isGrounded;
+    private bool isAlive;
 
+    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _circleCollider2D = GetComponent<CircleCollider2D>();
+        isAlive = true;
     }
 
+    // Update is called once per frame
     void Update()
     {
-        float moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        Run();
+        FlipSprite();
+        Die();
+    }
 
-        if (moveInput != 0)
+    void OnMove(InputValue value)
+    {
+        if (!isAlive)
         {
-            animator.SetBool("isRunning", true);
+            return;
         }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
+        moveInput = value.Get<Vector2>();
+        Debug.Log(">>>Move Input: " + moveInput);
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+    void OnJump(InputValue value)
+    {
+        if (!isAlive)
         {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            isJumping = true;
-            animator.SetBool("isJumping", true);
+            return;
         }
+        var isTouchingGround = _circleCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        if (!isTouchingGround) return;
+        if (value.isPressed)
+        {
+            _rigidbody2D.velocity += new Vector2(x: 0, y: jumpSpeed);
+        }
+    }
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            isAttacking = true;
-            animator.SetTrigger("Attack");  // Sử dụng SetTrigger thay vì SetBool
-        }
+    // điều khiển chuyển động nhân vật
+    void Run()
+    {
+        var moveVelocity = new Vector2(moveInput.x * moveSpeed, _rigidbody2D.velocity.y);
+        _rigidbody2D.velocity = moveVelocity;
 
-        // Kiểm tra nếu nhân vật đang trên mặt đất
-        if (Mathf.Abs(rb.velocity.y) < 0.001f)
+        bool playerHasHorizontalSpeed = Mathf.Abs(moveInput.x) > Mathf.Epsilon;
+        _animator.SetBool("isDichuyen", playerHasHorizontalSpeed);
+    }
+
+    // xoay hướng nhân vật theo chiều chuyển động 
+    void FlipSprite()
+    {
+        bool playerHasHorizontalSpeed = Mathf.Abs(_rigidbody2D.velocity.x) > Mathf.Epsilon;
+        if (playerHasHorizontalSpeed)
         {
-            isGrounded = true;
-            isJumping = false;
-            animator.SetBool("isJumping", false);
+            transform.localScale = new Vector2(Mathf.Sign(_rigidbody2D.velocity.x), y:1f);
         }
-        else
+    }
+
+    void Die()
+    {
+        var isTouchingEnemy = _circleCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy"));
+        if (isTouchingEnemy)
         {
-            isGrounded = false;
+            isAlive = false;
+            _animator.SetTrigger("isDie");
+            _rigidbody2D.velocity = new Vector2(x: 0, y: 0);
+            // xử lý die
+            FindObjectOfType<GameController>().ProcessPlayerDeath();
         }
     }
 }

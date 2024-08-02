@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     CircleCollider2D _circleCollider2D;
 
+  
+
+
     private bool isAlive;
 
     // Start is called before the first frame update
@@ -21,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
         _circleCollider2D = GetComponent<CircleCollider2D>();
         isAlive = true;
+
     }
 
     // Update is called once per frame

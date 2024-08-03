@@ -67820,7 +67820,7 @@ Transform:
   m_GameObject: {fileID: 1978238718}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.33298, y: -1.7011504, z: -10}
+  m_LocalPosition: {x: 36.265316, y: -1.7018399, z: -10}
   m_LocalScale: {x: 0.99558103, y: 0.99558103, z: 0.99558103}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67873,6 +67873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coins
       objectReference: {fileID: 0}
+    - target: {fileID: 974646530808078788, guid: a8430d6793628b946991d618926c0801, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5515705710946080500, guid: a8430d6793628b946991d618926c0801, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.44
@@ -67912,6 +67916,14 @@ PrefabInstance:
     - target: {fileID: 5515705710946080500, guid: a8430d6793628b946991d618926c0801, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496487567411813445, guid: a8430d6793628b946991d618926c0801, type: 3}
+      propertyPath: m_SortingLayer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496487567411813445, guid: a8430d6793628b946991d618926c0801, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1710068437
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5292,7 +5292,7 @@ MonoBehaviour:
   leftBoundary: 2.9
   righttBoundary: 17.6
   _animator: {fileID: 1869485343}
-  _maxHealth: 500
+  _maxHealth: 300
 --- !u!70 &1869485345
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

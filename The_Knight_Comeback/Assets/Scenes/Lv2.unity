@@ -68912,7 +68912,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7b77c7273b228474189261dab714567d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -69393,14 +69393,6 @@ PrefabInstance:
     - target: {fileID: 4273837208105019285, guid: 7517d9cc6a7f9524db466051151c194a, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8813091543685662904, guid: 7517d9cc6a7f9524db466051151c194a, type: 3}
-      propertyPath: leftBoundary
-      value: -26.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 8813091543685662904, guid: 7517d9cc6a7f9524db466051151c194a, type: 3}
-      propertyPath: righttBoundary
-      value: -21.06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

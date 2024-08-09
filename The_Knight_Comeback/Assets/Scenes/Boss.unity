@@ -4980,7 +4980,7 @@ GameObject:
   - component: {fileID: 1114420208}
   - component: {fileID: 1114420210}
   - component: {fileID: 1114420209}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5169,7 +5169,7 @@ GameObject:
   - component: {fileID: 1253682067}
   - component: {fileID: 1253682069}
   - component: {fileID: 1253682068}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5245,7 +5245,7 @@ GameObject:
   - component: {fileID: 1648555927}
   - component: {fileID: 1648555926}
   - component: {fileID: 1648555925}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5345,7 +5345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696605599}
   - component: {fileID: 1696605600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5504,9 +5504,9 @@ GameObject:
   - component: {fileID: 1869485345}
   - component: {fileID: 1869485346}
   - component: {fileID: 1869485344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5595,7 +5595,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7b77c7273b228474189261dab714567d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

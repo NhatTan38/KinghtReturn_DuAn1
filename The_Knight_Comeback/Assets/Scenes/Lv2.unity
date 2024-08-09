@@ -338,7 +338,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3580253630987946704, guid: 7517d9cc6a7f9524db466051151c194a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.33
+      value: 26.28
       objectReference: {fileID: 0}
     - target: {fileID: 3580253630987946704, guid: 7517d9cc6a7f9524db466051151c194a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -382,11 +382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8813091543685662904, guid: 7517d9cc6a7f9524db466051151c194a, type: 3}
       propertyPath: leftBoundary
-      value: 34.68895
+      value: 26.28
       objectReference: {fileID: 0}
     - target: {fileID: 8813091543685662904, guid: 7517d9cc6a7f9524db466051151c194a, type: 3}
       propertyPath: righttBoundary
-      value: 29.19
+      value: 31.72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32292,7 +32292,7 @@ Transform:
   m_GameObject: {fileID: 1190792795}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.3, y: -6.299998, z: -10}
+  m_LocalPosition: {x: -30.7, y: -5.799998, z: -10}
   m_LocalScale: {x: 0.41714036, y: 0.41714036, z: 0.41714036}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -69299,11 +69299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7360859990960082466, guid: 6265613115478c2458cba643f22a188a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.3
+      value: -30.7
       objectReference: {fileID: 0}
     - target: {fileID: 7360859990960082466, guid: 6265613115478c2458cba643f22a188a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.9
+      value: -12.4
       objectReference: {fileID: 0}
     - target: {fileID: 7360859990960082466, guid: 6265613115478c2458cba643f22a188a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69396,7 +69396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4273837208105019285, guid: 7517d9cc6a7f9524db466051151c194a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6117152197975975926, guid: 7517d9cc6a7f9524db466051151c194a, type: 3}
       propertyPath: m_IsTrigger

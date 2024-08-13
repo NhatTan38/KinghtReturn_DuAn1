@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tilemap
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -74,4 +76,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2250497931
+    locked: 0
+  - name: Bullet
+    uniqueID: 3102475907
     locked: 0

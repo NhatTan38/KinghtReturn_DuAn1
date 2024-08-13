@@ -88,4 +88,15 @@ public class Enemy : MonoBehaviour
         }
         transform.localScale = currentScale;
     }
+    // nếu trúng đạn chết 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            // nếu chạm viên đạn thì mất
+            Destroy(gameObject);
+            // viên đạn biến mất 
+            Destroy(other.gameObject);
+        }
+    }
 }

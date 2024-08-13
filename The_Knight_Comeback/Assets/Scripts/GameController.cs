@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] int score = 0;
-    [SerializeField] int live = 3;
+    [SerializeField] int live = 10;
 
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI liveText;

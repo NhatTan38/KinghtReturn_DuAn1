@@ -21412,7 +21412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  live: 3
+  live: 10
   scoreText: {fileID: 1765150415}
   liveText: {fileID: 702914704}
 --- !u!4 &540926356

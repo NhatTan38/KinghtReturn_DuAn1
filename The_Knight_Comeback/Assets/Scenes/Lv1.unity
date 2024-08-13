@@ -46820,7 +46820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  live: 3
+  live: 10
   scoreText: {fileID: 1128248764}
   liveText: {fileID: 1474724919}
 --- !u!4 &809103202

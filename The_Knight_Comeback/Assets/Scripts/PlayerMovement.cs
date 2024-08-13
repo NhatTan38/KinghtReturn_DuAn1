@@ -12,9 +12,6 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     CircleCollider2D _circleCollider2D;
 
-  
-
-
     private bool isAlive;
 
     // Start is called before the first frame update
@@ -43,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         }
         moveInput = value.Get<Vector2>();
         Debug.Log(">>>Move Input: " + moveInput);
+
     }
 
     void OnJump(InputValue value)
